@@ -1,9 +1,9 @@
-from .utils_1 import *
+from .utils_1 import get_fuel
 
 
 def sol(f):
-    sum = 0
+    inner_sum = 0
     for num in f.readlines():
-        sum += get_fuel(num)
+        inner_sum += get_fuel(num)
     f.close()
-    return int(sum)
+    return int(inner_sum)

@@ -1,1 +1,2 @@
-from . import solution_a, solution_b
+from . import solution_a
+from . import solution_b
