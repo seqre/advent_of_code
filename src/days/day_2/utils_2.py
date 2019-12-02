@@ -15,3 +15,11 @@ def simple_intcode_comp(given_list: list):
             return None
 
     return given_list[0]
+
+
+def parse_input(f):
+    input_list = list()
+    for variable in f.readlines():
+        input_list = (str(variable).split(','))
+
+    return [int(i) for i in input_list]
