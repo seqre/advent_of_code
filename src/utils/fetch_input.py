@@ -26,7 +26,7 @@ def __download_missing(day):
         with open("days/day_{}/input.txt".format(day), 'wb') as f:
             f.write(response.content)
     else:
-        exit('Error during downloading input file')
+        exit('Error during downloading input file: {}'.format(response.status_code))
 
 
 def __check_env():
