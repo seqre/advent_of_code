@@ -1,13 +1,14 @@
 def simple_intcode_comp(given_list: list):
     i = 0
-    while i < given_list.__len__():
-        if int(given_list[i]) == 99:
+    while i < len(given_list):
+        code = int(given_list[i])
+        if code == 99:
             break
-        elif int(given_list[i]) == 1:
+        elif code == 1:
             inner_sum = given_list[int(given_list[i + 1])] + given_list[int(given_list[i + 2])]
             given_list[int(given_list[i + 3])] = inner_sum
             i += 4
-        elif int(given_list[i]) == 2:
+        elif code == 2:
             inner_mult = given_list[int(given_list[i + 1])] * given_list[int(given_list[i + 2])]
             given_list[int(given_list[i + 3])] = inner_mult
             i += 4

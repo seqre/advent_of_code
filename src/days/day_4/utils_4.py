@@ -1,6 +1,6 @@
 def check_pass(password):
     double_number = False
-    for i in range(1, password.__len__()):
+    for i in range(1, len(password)):
         if password[i - 1] > password[i]:
             return False
         if password[i - 1] == password[i]:
@@ -11,7 +11,7 @@ def check_pass(password):
 
 def check_pass_not_in_quad(password):
     double_number = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-    for i in range(1, password.__len__()):
+    for i in range(1, len(password)):
         if password[i - 1] > password[i]:
             return False
         if password[i - 1] == password[i]:
@@ -30,6 +30,6 @@ def parse_input(f):
     for line in f:
         limits = line.split('-')
 
-    limits[limits.__len__() - 1] = str(limits[limits.__len__() - 1]).replace('\n', '')
+    limits[len(limits) - 1] = str(limits[len(limits) - 1]).replace('\n', '')
 
     return limits

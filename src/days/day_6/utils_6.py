@@ -7,7 +7,7 @@ class Node:
 
     def add_child(self, name, parent, level):
         self.children.append(Node(name, parent, level))
-        return self.children[self.children.__len__() - 1]
+        return self.children[len(self.children) - 1]
 
 
 def parse_input(f):
@@ -65,7 +65,7 @@ def find_common_ancestor(santa: Node, you: Node):
     santa_parents = get_parents(santa)
     you_parents = get_parents(you)
 
-    for i in range(santa_parents.__len__()):
-        for j in range(you_parents.__len__()):
+    for i in range(len(santa_parents)):
+        for j in range(len(you_parents)):
             if santa_parents[i] == you_parents[j]:
                 return i + j

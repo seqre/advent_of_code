@@ -8,5 +8,3 @@ def sol(f):
     you = find_node(root, 'YOU')
     san = find_node(root, 'SAN')
     return find_common_ancestor(san, you)
-
-    pass

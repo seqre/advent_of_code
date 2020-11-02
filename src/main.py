@@ -1,4 +1,4 @@
-from utils import solution_runner
+from .utils import solution_runner
 
 if not __name__ == "__main__":
     exit('Not designed to run as module')

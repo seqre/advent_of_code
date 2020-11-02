@@ -1,6 +1,7 @@
-import requests
-from os import path
 from os import environ
+from os import path
+
+import requests
 
 
 def get_file(day):
@@ -30,7 +31,5 @@ def __download_missing(day):
 
 
 def __check_env():
-    if 'AOC_SESSION' in environ:
-        pass
-    else:
+    if 'AOC_SESSION' not in environ:
         exit('Please put your session cookie in AOC_SESSION environmental variable')

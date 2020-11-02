@@ -1,5 +1,6 @@
 import importlib
-from utils import fetch_input
+
+from . import fetch_input
 
 
 def run(number, char):

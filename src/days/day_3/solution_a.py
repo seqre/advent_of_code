@@ -1,5 +1,7 @@
-from .utils_3 import get_lines
+import sys
+
 from .utils_3 import Line
+from .utils_3 import get_lines
 
 
 def sol(f):
@@ -8,7 +10,7 @@ def sol(f):
 
     get_lines(f, line1, line2)
 
-    min_point_dist = 100000000000
+    min_point_dist = sys.maxsize
 
     points1 = line1.constrain(line2.get_limits())
     points2 = line2.constrain(line1.get_limits())

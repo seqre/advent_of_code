@@ -11,8 +11,8 @@ def parse_input(f):
     for variable in f.readlines():
         input_list.append(str(variable).split(','))
 
-    for ele in input_list:
-        ele[ele.__len__() - 1] = str(ele[ele.__len__() - 1]).replace('\n', '')
+    for el in input_list:
+        el[len(el) - 1] = str(el[len(el) - 1]).replace('\n', '')
 
     return input_list
 
