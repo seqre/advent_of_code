@@ -12,8 +12,8 @@ main = do
 
 sol1 :: [[String]] -> Int
 sol1 [] = 0
-sol1 l = foldl (\acc el -> acc + (length.nub.sort.concat) el) 0 l
+sol1 l = sum $ map (length.nub.sort.concat) l
 
 sol2 :: [[String]] -> Int
 sol2 [] = 0
-sol2 l = foldl (\acc el -> acc + (length.nub.sort) (foldl intersect "abcdefghijklmnopqrstuvwxyz" el)) 0 l
+sol2 l = sum $ map (length.nub.sort.foldl intersect ['a'..'z']) l
