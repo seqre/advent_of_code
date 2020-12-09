@@ -36,10 +36,9 @@ sol2 l x = sumSmallLarge.head.(filter (\x -> length x > 1)) $ subseqs
                    
 caterpillar :: [Int] -> Int -> Int -> [[Int]]
 caterpillar [] _ _ = []
-caterpillar list len val = let sub_list = take len list
-                               sub_sum = sum sub_list
-                           in  if sub_sum == val
-                               then sub_list : caterpillar (tail list) (len + 1) val
-                               else if sub_sum > val
-                                    then caterpillar (tail list) 0 val
-                                    else caterpillar list (len + 1) val
+caterpillar list len val | sub_sum == val = sub_list : caterpillar (tail list) (len + 1) val
+                         | sub_sum > val  = caterpillar (tail list) 0 val
+                         | sub_sum < val  = caterpillar list (len + 1) val
+                         where
+                                   sub_list = take len list
+                                   sub_sum = sum sub_list
