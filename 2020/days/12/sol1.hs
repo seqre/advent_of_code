@@ -49,12 +49,11 @@ moveShip sh (i:is) | act i == North   = moveShip (SH (facing sh) (pos_e sh) (pos
                    | otherwise        = moveShip (SH (changeFacing (facing sh) (act i) (val i)) (pos_e sh) (pos_n sh)) is
 
 changeFacing :: Direction -> Action -> Int -> Direction
-changeFacing dir side val = if side == Right then get_n base_r 
-					     else get_n base_l
+changeFacing dir Left val = changeFacing dir Right (360 - val)
+changeFacing dir side val = get_n base
                             where
 				    repetitions = div val 90
-				    base_r = cycle [N,E,S,W]
-				    base_l = cycle [N,W,S,E]
+				    base = cycle [N,E,S,W]
 				    get_n list = dropWhile (/= dir) list !! repetitions
 
 
