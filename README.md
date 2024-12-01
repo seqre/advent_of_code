@@ -12,3 +12,15 @@
 | 2022 | ? | ☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆ |
 | 2023 | ? | ☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆ |
 | 2024 | ? | ☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆ |
+
+Languages to consider:
+- Go
+- TypeScript
+- Bash
+- Kotlin
+- PHP
+- Swift
+- Zig
+- Lisp
+- Nim
+- Dart
