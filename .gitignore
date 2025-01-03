@@ -21,3 +21,5 @@ cabal.project.local
 cabal.project.local~
 .HTF/
 .ghc.environment.*
+2024/input/*.txt
+aoc_2024
